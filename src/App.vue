@@ -2,17 +2,26 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p v-for="(product, index) in products" v-bind:key="index">
+      {{product.name}}
+    </p>
   </div>
 </template>
 
 <script>
+import productsJson from "./data/products.json"
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld
-  }
+  },
+  data() {
+    return {
+      products: productsJson
+    }
+  },
 }
 </script>
 
