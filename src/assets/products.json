@@ -1,0 +1,93 @@
+[
+  {
+    "ProductName": "Almond Toe Court Shoes, Patent Black",
+    "Category": "Women’s Footwear",
+    "Price": 99,
+    "QuantityInStock": 5,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Suede Shoes, Blue",
+    "Category": "Women’s Footwear",
+    "Price": 42,
+    "QuantityInStock": 4,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Leather Driver Saddle Loafers, Tan",
+    "Category": "Men’s Footwear",
+    "Price": 34,
+    "QuantityInStock": 12,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Flip Flops, Red",
+    "Category": "Men’s Footwear",
+    "Price": 19,
+    "QuantityInStock": 6,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Flip Flops, Blue",
+    "Category": "Men’s Footwear",
+    "Price": 19,
+    "QuantityInStock": 0,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Gold Button Cardigan, Black",
+    "Category": "Women’s Casualwear",
+    "Price": 167,
+    "QuantityInStock": 6,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Cotton Shorts, Medium Red",
+    "Category": "Women’s Casualwear",
+    "Price": 30,
+    "QuantityInStock": 5,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Fine Stripe Short Sleeve Shirt, Grey",
+    "Category": "Men’s Casualwear",
+    "Price": 49.99,
+    "QuantityInStock": 9,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Fine Stripe Short Sleeve Shirt, Green",
+    "Category": "Men’s Casualwear",
+    "Price": 49.99,
+    "QuantityInStock": 3,
+    "Discount": 10
+  },
+  {
+    "ProductName": "Sharkskin Waistcoat, Charcoal",
+    "Category": "Men’s Formalwear",
+    "Price": 75,
+    "QuantityInStock": 2,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Lightweight Patch Pocket Blazer, Deer",
+    "Category": "Men’s Formalwear",
+    "Price": 175.5,
+    "QuantityInStock": 1,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Bird Print Dress, Black",
+    "Category": "Women’s Formalwear",
+    "Price": 270,
+    "QuantityInStock": 10,
+    "Discount": 0
+  },
+  {
+    "ProductName": "Mid Twist Cut-Out Dress, Pink",
+    "Category": "Women’s Formalwear",
+    "Price": 540,
+    "QuantityInStock": 5,
+    "Discount": 0
+  }
+]
