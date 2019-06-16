@@ -61,6 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900&display=swap');
 main {
   display: grid;
   grid-template-columns: 1fr 400px;
