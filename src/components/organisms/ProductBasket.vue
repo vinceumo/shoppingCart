@@ -145,6 +145,10 @@ $btn-height: 3.75rem;
   max-height: 90vh;
   transition: transform 0.3s ease-in-out;
 
+  @include ie11() {
+    transform: translateY(100%) translateY(-3.75rem) translateX(-50%);
+  }
+
   @include min(bp(md)) {
     position: sticky;
     top: spacer(2);

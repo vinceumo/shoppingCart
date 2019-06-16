@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="product-listing-section">
     <ul class="list-unstyled product-listing">
       <ProductCard 
         v-for="(product, index) in products" 
@@ -50,7 +50,7 @@ export default {
   }
 }
 
-@mixin movieListingGridFallback() {
+@mixin ListingGridFallback() {
   .product-listing{
     display: flex;
     flex-wrap: wrap;
@@ -89,11 +89,11 @@ export default {
 
 @supports not (display: grid) {
   @supports (display: flex) {
-    @include movieListingGridFallback();
+    @include ListingGridFallback();
   }
 }
 
 @include ie11() {
-  @include movieListingGridFallback();
+  @include ListingGridFallback();
 }
 </style>

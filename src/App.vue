@@ -72,10 +72,30 @@ export default {
 </script>
 
 <style lang="scss">
+$basket-width: 400px;
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900&display=swap');
 
 body {
   background-color: color-gray(10);
+}
+
+@mixin mainContentLayoutFalback() {
+  display: flex;
+  align-items: flex-start;
+
+  .product-basket {
+    min-width: $basket-width;
+    max-width: $basket-width;
+    width: $basket-width;
+    flex: 0 0 $basket-width;
+  }
+
+  .product-listing-section {
+    min-width: calc(100% - #{$basket-width});
+    max-width: calc(100% - #{$basket-width});
+    width: calc(100% - #{$basket-width});
+    flex: 0 0 calc(100% - #{$basket-width});
+  }
 }
 
 #main-content {
@@ -83,10 +103,23 @@ body {
 
   &.has-basket {
     @include min(bp(md)) {
-      display: grid;
-      align-items: flex-start;
-      grid-gap: spacer(3);
-      grid-template-columns: 1fr 400px;
+      @supports (display: grid) {
+        display: grid;
+        align-items: flex-start;
+        grid-gap: spacer(3);
+        grid-template-columns: 1fr $basket-width;
+      }
+
+      @supports not (display: grid) {
+        @supports (display: flex) {
+          @include mainContentLayoutFalback();
+        }
+      }
+
+      @include ie11() {
+        @include mainContentLayoutFalback();
+      }
+      
     }
   }
 }

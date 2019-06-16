@@ -17,6 +17,15 @@
   padding: spacer(3) 0;
   margin-bottom: spacer(3);
 
+  @include ie11() {
+    .container {
+      > * {
+        max-width: 400px;
+      }
+    }
+  }
+  
+
   h2 {
     margin-top: 0;
   }
