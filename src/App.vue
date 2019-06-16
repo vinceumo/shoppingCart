@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NotificationBanner/>
-    <main>
+    <main id="main-content" v-bind:class="(basketItems.length) ? 'has-basket' : ''">
       <ProductListing 
         v-bind:products="products"
         v-on:onAddToBasket="getAddToBasket" />
@@ -60,10 +60,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900&display=swap');
-main {
-  display: grid;
-  grid-template-columns: 1fr 400px;
+
+body {
+  background-color: color-gray(10);
+}
+
+#main-content {
+  &.has-basket {
+    @include min(bp(md)) {
+      display: grid;
+      grid-gap: spacer(3);
+      grid-template-columns: 1fr 400px;
+    }
+  }
 }
 </style>
