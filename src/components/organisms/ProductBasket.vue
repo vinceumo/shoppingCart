@@ -1,11 +1,11 @@
 <template>
-  <section class="product-cart" v-bind:class="(showBasket) ? 'has-basket-open' : ''">
+  <section class="product-basket" v-bind:class="(showBasket) ? 'has-basket-open' : ''">
     <div class="basket-toggle">
       <button 
         class="btn is-primary"
-        v-on:click="showBasket = !showBasket">Basket</button>
+        v-on:click="toggleBasket">Basket</button>
     </div>
-    <div class="product-cart-content">
+    <div rel="basketContent" class="product-basket-content">
       <ul class="list-unstyled product-list">
         <li v-for="(item, index) in basketItems" v-bind:key="index + item.id">
           <p><b>{{ item.name }}</b> x {{ item.quantityInBasket }}</p>
@@ -56,6 +56,10 @@ export default {
     }
   },
   methods: {
+    toggleBasket() {
+      this.showBasket = !this.showBasket;
+      //Todo implement inert toggle
+    },
     removeToBasket(id) {
       this.$emit("onRemoveToBasket", id);
     },
@@ -128,7 +132,7 @@ export default {
 <style lang="scss" scoped>
 $btn-height: 3.75rem;
 
-.product-cart {
+.product-basket {
   background-color: color-gray(0);
   box-shadow: $box-shadow;
   border-radius: 2rem;
@@ -167,7 +171,7 @@ $btn-height: 3.75rem;
     }
   }
 
-  .product-cart-content {
+  .product-basket-content {
     padding: spacer(3);
     max-height: calc(100vh - #{$btn-height * 3});
     overflow-y: auto;

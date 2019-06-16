@@ -10,8 +10,8 @@ module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/shoppingCart/" : "/",
   pwa: {
     name: "Shopping",
-    themeColor: "hsl(11, 87%, 61%)",
-    msTileColor: "hsl(11, 87%, 61%)",
+    themeColor: "#38ee7e",
+    msTileColor: "#38ee7e",
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "black",
     iconPaths: {

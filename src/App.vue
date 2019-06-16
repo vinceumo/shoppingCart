@@ -10,7 +10,7 @@
         <ProductListing 
           v-bind:products="products"
           v-on:onAddToBasket="getAddToBasket" />
-        <ProductCart 
+        <ProductBasket 
           v-if="basketItems.length"
           v-bind:basketItems="basketItems"
           v-on:onRemoveToBasket="getRemoveToBasket"/>
@@ -23,19 +23,21 @@
 import productsJson from "./data/products.json";
 import NotificationBanner from './components/organisms/NotificationBanner';
 import ProductListing from './components/organisms/ProductListing';
-import ProductCart from "./components/organisms/ProductCart";
+import ProductBasket from "./components/organisms/ProductBasket";
+import cssVars from "css-vars-ponyfill";
 
 export default {
   name: 'app',
   components: {
     NotificationBanner,
-    ProductCart,
+    ProductBasket,
     ProductListing
   },
   data() {
     return {
       products: productsJson,
-      basketItems: []
+      basketItems: [],
+      mobileBasketIsOpen: false,
     }
   },
   created() {
@@ -43,6 +45,9 @@ export default {
     this.products.forEach((product, index) => {
       product.id = `p${index}`;
     });
+  },
+  mounted: function() {
+    cssVars();
   },
   methods: {
     getAddToBasket(i) {
