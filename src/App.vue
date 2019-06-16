@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <ProductListing 
-      v-bind:products="products"
-      v-on:onAddToBasket="getAddToBasket" />
-    <ProductCart 
-      v-if="basketItems.length"
-      v-bind:basketItems="basketItems"
-      v-on:onRemoveToBasket="getRemoveToBasket"/>
+    <NotificationBanner/>
+    <main>
+      <ProductListing 
+        v-bind:products="products"
+        v-on:onAddToBasket="getAddToBasket" />
+      <ProductCart 
+        v-if="basketItems.length"
+        v-bind:basketItems="basketItems"
+        v-on:onRemoveToBasket="getRemoveToBasket"/>
+    </main>
   </div>
 </template>
 
 <script>
 import productsJson from "./data/products.json";
+import NotificationBanner from './components/organisms/NotificationBanner';
 import ProductListing from './components/organisms/ProductListing';
 import ProductCart from "./components/organisms/ProductCart";
 
 export default {
   name: 'app',
   components: {
+    NotificationBanner,
     ProductCart,
     ProductListing
   },
@@ -56,7 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
+main {
   display: grid;
   grid-template-columns: 1fr 400px;
 }
