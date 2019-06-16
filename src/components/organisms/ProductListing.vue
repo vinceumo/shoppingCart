@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <ul class="list-unstyled product-listing">
       <ProductCard 
         v-for="(product, index) in products" 
@@ -36,6 +36,8 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: spacer(3);
+    padding-bottom: spacer(3);
+    margin-top: 0;
 
     @include min(bp(sm)) {
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

@@ -18,6 +18,12 @@ $color-themes: (
     "dark": hsl(143, 85%, 58% - 15),
     "light": hsl(143, 85%, 58%+ 15),
     "contrast": hsl(0, 0%, 100%)
+  ),
+  "danger": (
+    "base": hsl(0, 85%, 58%),
+    "dark": hsl(0, 85%, 58% - 15),
+    "light": hsl(0, 85%, 58%+ 15),
+    "contrast": hsl(0, 0%, 100%)
   )
 );
 

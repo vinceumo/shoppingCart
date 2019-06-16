@@ -1,15 +1,21 @@
 <template>
   <div id="app">
+    <div class="container">
+      <h1>Shopping</h1>
+    </div>
     <NotificationBanner/>
-    <main id="main-content" v-bind:class="(basketItems.length) ? 'has-basket' : ''">
-      <ProductListing 
-        v-bind:products="products"
-        v-on:onAddToBasket="getAddToBasket" />
-      <ProductCart 
-        v-if="basketItems.length"
-        v-bind:basketItems="basketItems"
-        v-on:onRemoveToBasket="getRemoveToBasket"/>
-    </main>
+    <div class="container">
+      <h2>Products:</h2>
+      <main id="main-content" v-bind:class="(basketItems.length) ? 'has-basket' : ''">
+        <ProductListing 
+          v-bind:products="products"
+          v-on:onAddToBasket="getAddToBasket" />
+        <ProductCart 
+          v-if="basketItems.length"
+          v-bind:basketItems="basketItems"
+          v-on:onRemoveToBasket="getRemoveToBasket"/>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -68,9 +74,12 @@ body {
 }
 
 #main-content {
+  padding-bottom: spacer(6);
+
   &.has-basket {
     @include min(bp(md)) {
       display: grid;
+      align-items: flex-start;
       grid-gap: spacer(3);
       grid-template-columns: 1fr 400px;
     }
