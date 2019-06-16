@@ -4,7 +4,8 @@
     <p class="category">{{ product.category }}</p>
     <p v-if="product.discount === 0"><b>{{ product.price | currency }}</b></p>
     <p v-else><b><del>{{ product.price | currency }}</del> | {{ product.price - product.discount | currency }}</b></p>
-    <p>Quantity left: {{ product.quantityInStock }}</p>
+    <p v-if="product.quantityInStock > 0">Quantity left: {{ product.quantityInStock }}</p>
+    <p v-else class="has-bg-danger-light has-py-2 has-px-3">Out of stock</p>
     <button 
       class="btn is-gradient"
       v-bind:disabled="product.quantityInStock === 0"

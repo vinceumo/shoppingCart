@@ -1,0 +1,32 @@
+@each $name, $theme in $color-themes {
+  .has-bg-#{$name} {
+    background-color: color($name, base);
+    color: color($name, contrast);
+  }
+
+  .has-bg-#{$name}-light {
+    background-color: color($name, light);
+  }
+}
+
+@each $name, $theme in $gray-themes {
+  .has-bg-gray-#{$name} {
+    background-color: color-gray($name);
+  }
+}
+
+.has-bg-gray-0 {
+  color: color-gray(100);
+}
+
+@for $i from 1 through 5 {
+  .has-bg-gray-#{$i}#{0}{
+    color: color-gray(100);
+  }
+}
+
+@for $i from 6 through 10 {
+  .has-bg-gray-#{$i}#{0} {
+    color: color-gray(0);
+  }
+}

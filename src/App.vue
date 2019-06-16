@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <h1>Shopping</h1>
+      <h1>Shopping: </h1>
     </div>
     <NotificationBanner/>
     <div class="container">

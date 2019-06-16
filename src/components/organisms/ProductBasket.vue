@@ -26,7 +26,7 @@
           Submit
         </button>
       </div>
-      <p class="error-msg" v-if="voucherErrorMsg">{{ voucherErrorMsg }}</p>
+      <p class="has-bg-danger-light has-py-2 has-px-3" v-if="voucherErrorMsg">{{ voucherErrorMsg }}</p>
       <div v-if="voucherDiscount > 0">
         <p><b>Discount: </b>{{ voucherDiscount | currency }}</p>
         <p>
@@ -197,11 +197,6 @@ $btn-height: 3.75rem;
     input {
       width: 100%;
     }
-  }
-
-  .error-msg {
-    background-color: color(danger, light);
-    padding: spacer(2) spacer(3);
   }
 }
 </style>
