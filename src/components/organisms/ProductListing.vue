@@ -4,7 +4,7 @@
       <ProductCard 
         v-for="(product, index) in products" 
         v-bind:key="index"
-        v-bind:id="index"
+        v-bind:index="index"
         v-bind:product="product"
         v-on:onAddToBasket="getAddToBasket"/>
     </ul>

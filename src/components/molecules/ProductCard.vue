@@ -7,7 +7,7 @@
     <p>Quantity: {{ product.quantityInStock }}</p>
     <button 
       v-bind:disabled="product.quantityInStock === 0"
-      v-on:click="addToBasket(id) ">
+      v-on:click="addToBasket(index)">
       Add to basket
     </button>
   </li>
@@ -16,7 +16,7 @@
 <script>
 export default {
   props: {
-    id: Number,
+    index: Number,
     product: Object
   },
   methods: {
