@@ -112,3 +112,12 @@ We are using CSS custom properties as well (the SCSS var functions output CSS cu
 ### Vue
 
 Components are organized following the atomic design methodology we can find molecules and organisms.
+
+## Tested on:
+
+- Chrome 74
+- Edge 42
+- Firefox 67
+- Android Chrome 75
+- Safari IOS 12
+- MacOS Safari 12
