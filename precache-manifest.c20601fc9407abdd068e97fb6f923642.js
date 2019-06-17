@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/shoppingCart/js/chunk-vendors.636e965e.js"
   },
   {
-    "revision": "6c8f9a2e20b1cd547890",
-    "url": "/shoppingCart/js/app.b1beaa55.js"
+    "revision": "94e56035298bfb91163b",
+    "url": "/shoppingCart/js/app.89c4ba6f.js"
   },
   {
-    "revision": "3ea63c958c11ef3e3f393b8f2b317871",
+    "revision": "24815835fd55e20c0e817053c0d804b9",
     "url": "/shoppingCart/index.html"
   },
   {
-    "revision": "6c8f9a2e20b1cd547890",
+    "revision": "94e56035298bfb91163b",
     "url": "/shoppingCart/css/app.1fa3daf8.css"
   },
   {
